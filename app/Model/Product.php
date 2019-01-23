@@ -37,8 +37,8 @@ class Product extends Model
         return $this->hasOne('App\Model\Comment', 'product_id');
     }
 
-    public function ProductGalleries()
+    public function productGalleries()
     {
-        return $this->hasMany('App\Model\ProductScreenahot','product_id', 'id');
+        return $this->hasMany('App\Model\ProductGallery','product_id', 'id');
     }
 }

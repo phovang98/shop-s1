@@ -4,7 +4,7 @@
     @php
         $defaultImg = $product->image == null ? asset('images/default-image.png') : $product->image;
     @endphp
-
+    <input type="hidden" value="{{asset($defaultImg)}}" id="defaultImage">
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -93,8 +93,8 @@
                                             <label for="">Chi tiết </label>
                                             <textarea name="detail" rows="20" class="form-control">{!!old('detail', $product->description)!!}</textarea>
                                         </div>
-                                        <div class="text-right">
-                                            <button type="submit" class="btn btn-sm btn-primary">Cập nhật sản phẩm</button>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-sm btn-success">Sửa</button>
                                             <a href="{{route('product.list')}}" class="btn btn-sm btn-danger">Hủy</a>
                                         </div>
                                     </div>
@@ -181,6 +181,10 @@
 
         function encodeImageFileAsURL(element) {
             var file = element.files[0];
+            if(file == undefined){
+                $('#preview' ).attr('src', $('#defaultImage').val());
+                return false;
+            }
             var reader = new FileReader();
             reader.onloadend = function() {
                 // console.log('RESULT', reader.result)

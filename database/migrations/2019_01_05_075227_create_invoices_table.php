@@ -21,6 +21,7 @@ class CreateInvoicesTable extends Migration
             $table->text('customer_address');
             $table->integer('total_price')->default(0);
             $table->integer('payment_method')->default(1);
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }

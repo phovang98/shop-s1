@@ -29,44 +29,22 @@
                     <section class="widget widget-posts">
                         <h3 class="widget-title ui-title-block"><i class="icon fa fa-bars"></i>recent posts</h3>
                         <div class="block_content">
-                            <div class="widget-posts__wrap">
-                                <section class="widget-posts__item clearfix">
-                                    <div class="entry-thumbnail"> <a class="img" href="javascript:void(0);"> <img class="img-responsive" src="{{ asset('client/media/100x100/4.jpg') }}" height="100" width="100" alt="Foto"></a> </div>
-                                    <div class="entry-main">
-                                        <h4 class="entry-header"><a href="javascript:void(0);">Lorem ipsum dolor sit amet cons adipisicing</a></h4>
-                                        <div class="entry-meta">
-                                            <div class="meta"><i class="icon icon-calendar"></i>
-                                                June 20, 2015
+                            @foreach($articleNews as $articleNew)
+                                <div class="widget-posts__wrap">
+                                    <section class="widget-posts__item clearfix">
+                                        <div class="entry-thumbnail"> <a class="img" href="{{route('client.article-detail',$article->id)}}"> <img class="img-responsive" src="{{ asset($articleNew->image) }}" height="100" width="100" alt="Foto"></a> </div>
+                                        <div class="entry-main">
+                                            <h4 class="entry-header"><a href="{{route('client.article-detail',$articleNew->id)}}">{{ $articleNew->title }}</a></h4>
+                                            <div class="entry-meta">
+                                                <div class="meta"><i class="icon icon-calendar"></i>
+                                                    {{ $articleNew->created_at }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </section>
-                                <!-- end widget-post__item -->
-                                <section class="widget-posts__item clearfix">
-                                    <div class="entry-thumbnail"> <a class="img" href="javascript:void(0);"> <img class="img-responsive" src="{{ asset('client/media/100x100/5.jpg') }}" height="100" width="100" alt="Foto"></a> </div>
-                                    <div class="entry-main">
-                                        <h4 class="entry-header"><a href="javascript:void(0);">Lorem ipsum dolor sit amet cons adipisicing</a></h4>
-                                        <div class="entry-meta">
-                                            <div class="meta"><i class="icon icon-calendar"></i>
-                                                June 20, 2015
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!-- end widget-post__item -->
-                                <section class="widget-posts__item clearfix">
-                                    <div class="entry-thumbnail"> <a class="img" href="javascript:void(0);"> <img class="img-responsive" src="{{ asset('client/media/100x100/6.jpg') }}" height="100" width="100" alt="Foto"></a> </div>
-                                    <div class="entry-main">
-                                        <h4 class="entry-header"><a href="javascript:void(0);">Lorem ipsum dolor sit amet cons adipisicing</a></h4>
-                                        <div class="entry-meta">
-                                            <div class="meta"><i class="icon icon-calendar"></i>
-                                                June 20, 2015
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!-- end widget-post__item -->
-                            </div>
+                                    </section>
+                                    <!-- end widget-post__item -->
+                                </div>
+                            @endforeach
                         </div>
                     </section>
                     <!-- end widget-posts -->
@@ -131,35 +109,19 @@
                     <!-- end wrap-title-page -->
 
                     <div class="list-posts list-posts_mod-b list-unstyled">
-                        <article class="list-posts__article clearfix"> <img class="img-responsive" src="{{ asset('client/media/870x350/1.jpg') }}" height="350" width="870" alt="Foto">
-                            <div class="list-posts__info pull-right"> <i class="icon icon-user"></i><span class="list-posts__autor">By <a class="color_primary" href="javascript:void(0);">MEX</a></span> <i class="icon icon-calendar"></i><span class="list-posts__date">
-                  June 20, 2015
-                  </span> </div>
-                            <h2 class="list-posts__title">Eiusmod tempor incididunt ut labore et dolore</h2>
-                            <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem felis sollicit udin sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <a class="btn btn-primary" href="javascript:void(0);">READ MORE</a> </article>
-                        <article class="list-posts__article clearfix"> <img class="img-responsive" src="{{ asset('client/media/870x350/2.jpg') }}" height="350" width="870" alt="Foto">
-                            <div class="list-posts__info pull-right"> <i class="icon icon-user"></i><span class="list-posts__autor">By <a class="color_primary" href="javascript:void(0);">MEX</a></span> <i class="icon icon-calendar"></i><span class="list-posts__date">
-                  June 20, 2015
-                  </span> </div>
-                            <h2 class="list-posts__title">Sed do eiusmod tempor incididunt ut</h2>
-                            <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem felis sollicit udin sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <a class="btn btn-primary" href="javascript:void(0);">READ MORE</a> </article>
-                        <article class="list-posts__article clearfix"> <img class="img-responsive" src="{{ asset('client/media/870x350/1.jpg') }}" height="350" width="870" alt="Foto">
-                            <div class="list-posts__info pull-right"> <i class="icon icon-user"></i><span class="list-posts__autor">By <a class="color_primary" href="javascript:void(0);">MEX</a></span> <i class="icon icon-calendar"></i><span class="list-posts__date">
-                  June 20, 2015
-                  </span> </div>
-                            <h2 class="list-posts__title">Exercitation ullamco laboris nisi ut aliquip exea</h2>
-                            <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem felis sollicit udin sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <a class="btn btn-primary" href="javascript:void(0);">READ MORE</a> </article>
+                        @foreach($articles as $article)
+                            <article class="list-posts__article clearfix"> <img class="img-responsive" src="{{ asset($article->image) }}" height="150" width="870" alt="Foto">
+                                <div class="list-posts__info pull-right"> <i class="icon icon-user"></i>
+                                    <span class="list-posts__autor">By <a class="color_primary" href="javascript:void(0);">{{ $article->author }}</a></span> <i class="icon icon-calendar"></i>
+                                    <span class="list-posts__date">{{ $article->created_at }}</span>
+                                </div>
+                                <h2 class="list-posts__title">{{ $article->title }}</h2>
+                                <p>{{ $article->overview }}</p>
+                                <a class="btn btn-primary" href="{{route('client.article-detail',$article->id)}}">READ MORE</a>
+                            </article>
+                        @endforeach
                     </div>
-                    <ul class="pagination pagination_mod-a">
-                        <li><a href="#"><i class="icon fa fa-arrow-left"></i></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="icon fa fa-arrow-right"></i></a></li>
-                    </ul>
+                    {{ $articles->links() }}
                 </main>
             </div>
             <!-- end col -->

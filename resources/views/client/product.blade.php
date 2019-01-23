@@ -191,188 +191,47 @@
 
                     <div class="section-area">
                         <ul class="products clearfix">
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/2.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/2.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Samsung Galaxy S6 White</a></h4>
-                                <div class="products__category"><a href="#">SMARTPHONES</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$720</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                            </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/6.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/6.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Canon EOS 1200D</a></h4>
-                                <div class="products__category"><a href="#">CAMERAS</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$360</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                                <span class="label-wrap"><span class="label label-warning">NEW</span></span> </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/7.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/7.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Elekta 50” UHD 3D LED TV</a></h4>
-                                <div class="products__category"><a href="#">LED TV’s</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$685</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                            </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/8.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/8.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Sony PlayStation 4</a></h4>
-                                <div class="products__category"><a href="#">GAMES</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$370</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                            </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/9.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/9.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Apple Macbook Air 13”</a></h4>
-                                <div class="products__category"><a href="#">LAPTOPS</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$1.333</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                                <span class="label-wrap"><span class="label label-info">HOT</span></span> </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/10.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/10.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Eye Shadow Makeup Kit</a></h4>
-                                <div class="products__category"><a href="#">MAKEUP</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$80</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                                <span class="label-wrap"><span class="label label-danger">SALE</span></span> </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/5.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/5.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">MP3 Active 2 Neon Blue 4GB</a></h4>
-                                <div class="products__category"><a href="#">Music Players</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$235</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                                <span class="label-wrap"><span class="label label-danger">SALE</span></span> </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/3.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/3.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Perfume de Toilet</a></h4>
-                                <div class="products__category"><a href="#">PERFUMES</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$129</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                                <span class="label-wrap"><span class="label label-warning">NEW</span></span> </li>
-                            <li class="products__item"> <a class="products__foto" href="{{ asset('client/media/catalog/4.jpg') }}" rel="prettyPhoto"> <img src="{{ asset('client/media/catalog/4.jpg') }}" height="260" width="260" alt="Goods"> </a>
-                                <h4 class="products__name"><a href="#">Beats Solo Wireless</a></h4>
-                                <div class="products__category"><a href="#">HEADPHONES</a></div>
-                                <div class="products__inner clearfix"> <span class="products__price-new">$360</span> <span class="products__price-old">$89.00</span>
-                                    <ul class="rating">
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star"></i></li>
-                                        <li><i class="icon fa fa-star disabled"></i></li>
-                                    </ul>
-                                </div>
-                                <footer class="products-btns clearfix">
-                                    <button class="products-btns__btn products-btns__add"><i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart</button>
-                                    <span class="products-btns__other pull-right">
-                    <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
-                    <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
-                    </span> </footer>
-                            </li>
+                            @foreach($products as $product)
+                                <li class="isotope-item best products__item">
+                                    <div>
+                                        <a class="products__foto" href="{{ route('client.product-detail',$product->id) }}">
+                                            <img src="{{ asset($product->image)}}" height="260" width="260" alt="Goods">
+                                        </a>
+                                    </div>
+                                    <h4 class="products__name"><a href="{{ route('client.product-detail',$product->id) }}">{{ $product->name }}</a></h4>
+                                    <div class="products__category"><a href="#">{{ $product->category->name }}</a></div>
+                                    <div class="products__inner clearfix"><span class="products__price-new">${{ $product->price }}</span>
+                                        <span class="products__price-old">${{ $product->price }}</span>
+                                        <div class="products__inner clearfix">
+                                            <ul class="rating">
+                                                @for($i=0;$i<$product->star;$i++)
+                                                    <li><i class="icon fa fa-star"></i></li>
+                                                @endfor
+                                                @for($i=0;$i<(5 - $product->star);$i++)
+                                                    <li><i class="icon fa fa-star disabled"></i></li>
+                                                @endfor
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <footer class="products-btns clearfix">
+                                        <button class="products-btns__btn products-btns__add">
+                                            <i class="icon icon-bag color_primary" aria-hidden="true"></i><a class="add_to_cart_btn" href="javascript:void(0);" item_id={{$product->id}}> Add to cart </a>
+                                        </button>
+                                        <span class="products-btns__other pull-right">
+                                                <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
+                                                <button class="products-btns__btn"><i class="icon icon-heart"></i></button>
+                                            </span>
+                                    </footer>
+                                    <span class="label-wrap"><span class="label label-danger">SALE</span></span>
+                                </li>
+                            @endforeach
                         </ul>
                         <!-- end products -->
                     </div>
                     <!-- end section-area -->
 
                     <ul class="pagination">
-                        <li><a href="#"><i class="icon fa fa-arrow-left"></i></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="icon fa fa-arrow-right"></i></a></li>
+                        {{ $products->links() }}
                     </ul>
                 </div>
                 <!-- end col -->

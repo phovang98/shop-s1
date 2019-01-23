@@ -5,30 +5,35 @@
     <div id="sliderpro1" class="slider-pro main-slider">
         <div class="sp-slides">
             <div class="sp-slide"><img class="sp-image"
-                        src="{{ asset('client/media/main-slider/a.png')}}"
-                        data-src="{{ asset('client/media/main-slider/a.png')}}"
-                        data-retina="{{ asset('client/media/main-slider/a.png')}}" alt="img"/>
+                    src="{{ asset('client/media/main-slider/a.png')}}"
+                    data-src="{{ asset('client/media/main-slider/a.png')}}"
+                    data-retina="{{ asset('client/media/main-slider/a.png')}}" alt="img"/>
                 <div class="item-wrap sp-layer  sp-padding" data-horizontal="270" data-vertical="115"
                      data-show-transition="left" data-hide-transition="up" data-show-delay="400"
-                     data-hide-delay="200"><img src="{{ asset('client/media/main-slider/a1.png') }}" alt="slide element"/></div>
+                     data-hide-delay="200">
+                    <img src="{{ asset('client/media/main-slider/a1.png') }}" alt="slide element"/>
+                </div>
                 <div class="item-wrap sp-layer  sp-padding" data-horizontal="266" data-vertical="290"
-                     data-show-transition="left" data-hide-transition="up" data-show-delay="700"
-                     data-hide-delay="200"><img src="{{ asset('client/media/main-slider/a2.png') }}" alt="slide element"/></div>
+                     data-show-transition="left" data-hide-transition="up" data-show-delay="700" data-hide-delay="200">
+                </div>
                 <div class="item-wrap sp-layer  sp-padding" data-horizontal="340px" data-vertical="405"
-                     data-show-transition="left" data-hide-transition="up" data-show-delay="500"
-                     data-hide-delay="300"><a href="category-1.html"><img src="{{ asset('client/media/main-slider/a3.png') }}"
-                                                                          alt="slide element"/></a></div>
+                     data-show-transition="left" data-hide-transition="up" data-show-delay="500" data-hide-delay="300">
+                    <a href="category-1.html"><img src="{{ asset('client/media/main-slider/a3.png') }}" alt="slide element"/></a>
+                </div>
             </div>
             <div class="sp-slide"><img class="sp-image"
-                                       src="{{ asset('client/media/main-slider/b.png')}}"
-                                       data-src="{{ asset('client/media/main-slider/b.png')}}"
-                                       data-retina="{{ asset('client/media/main-slider/b.png') }}" alt="img')}}"/>
+                    src="{{ asset('client/media/main-slider/b.png')}}"
+                    data-src="{{ asset('client/media/main-slider/b.png')}}"
+                    data-retina="{{ asset('client/media/main-slider/b.png') }}" alt="img')}}"/>
                 <div class="item-wrap sp-layer  sp-padding" data-horizontal="1050" data-vertical="175"
                      data-show-transition="left" data-hide-transition="up" data-show-delay="400"
-                     data-hide-delay="200"><img src="{{ asset('client/media/main-slider/b1.png') }}" alt="slide element"/></div>
+                     data-hide-delay="200">
+                    <img src="{{ asset('client/media/main-slider/b1.png') }}" alt="slide element"/></div>
                 <div class="item-wrap sp-layer  sp-padding" data-horizontal="1250" data-vertical="360"
                      data-show-transition="left" data-hide-transition="up" data-show-delay="700"
-                     data-hide-delay="200"><img src="{{ asset('client/media/main-slider/b2.png') }}" alt="slide element"/></div>
+                     data-hide-delay="200">
+                    <img src="{{ asset('client/media/main-slider/b2.png') }}" alt="slide element"/>
+                </div>
             </div>
         </div>
     </div>
@@ -105,25 +110,33 @@
             <div class="col-xs-12">
                 <div class="section-area">
                     <div class="isotope-frame wow bounceInRight" data-wow-duration="2s">
-                        <ul class="isotope-filter products clearfix">
+                        {{--<ul class="isotope-filter products clearfix">--}}
+                        <ul class="products clearfix">
                             @foreach($products as $product)
                                     <li class="isotope-item best products__item">
-                                        <a class="products__foto" href="" rel="prettyPhoto">
-                                            <img src="{{ asset($product->image)}}" height="260" width="260" alt="Goods">
-                                        </a>
-                                        <h4 class="products__name"><a href="#">{{ $product->name }}</a></h4>
+                                        <div>
+                                            <a class="products__foto" href="{{ route('client.product-detail',$product->id) }}">
+                                                <img src="{{ asset($product->image)}}" height="260" width="260" alt="Goods">
+                                            </a>
+                                        </div>
+                                        <h4 class="products__name"><a href="{{ route('client.product-detail',$product->id) }}">{{ $product->name }}</a></h4>
                                         <div class="products__category"><a href="#">{{ $product->category->name }}</a></div>
                                         <div class="products__inner clearfix"><span class="products__price-new">${{ $product->price }}</span>
                                             <span class="products__price-old">${{ $product->price }}</span>
-                                            <ul class="rating">
-                                                @for($i=0;$i<$product->star;$i++)
-                                                    <li><i class="icon fa fa-star"></i></li>
-                                                @endfor
-                                            </ul>
+                                            <div class="products__inner clearfix">
+                                                <ul class="rating">
+                                                    @for($i=0;$i<$product->star;$i++)
+                                                        <li><i class="icon fa fa-star"></i></li>
+                                                    @endfor
+                                                    @for($i=0;$i<(5 - $product->star);$i++)
+                                                        <li><i class="icon fa fa-star disabled"></i></li>
+                                                    @endfor
+                                                </ul>
+                                            </div>
                                         </div>
                                         <footer class="products-btns clearfix">
                                             <button class="products-btns__btn products-btns__add">
-                                                <i class="icon icon-bag color_primary" aria-hidden="true"></i> Add to cart
+                                                <i class="icon icon-bag color_primary" aria-hidden="true"></i><a class="add_to_cart_btn" href="javascript:void(0);" item_id={{$product->id}}> Add to cart </a>
                                             </button>
                                             <span class="products-btns__other pull-right">
                                                 <button class="products-btns__btn"><i class="icon icon-shuffle"></i></button>
@@ -134,6 +147,7 @@
                                     </li>
                             @endforeach
                         </ul>
+                        {{ $products->links() }}
                     </div>
                 </div>
                 <!-- end section-area -->
@@ -581,33 +595,33 @@
     </div>
     <!-- end container -->
 
-    <div class="section-area section-social-links wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12"><span class="social-links__title">Let’s Connect With Us</span>
-                    <ul class="social-links list-unstyled">
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-twitter"></i></a></li>
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-facebook"></i></a></li>
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-google-plus"></i></a></li>
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-instagram"></i></a></li>
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-pinterest-p"></i></a></li>
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-rss"></i></a></li>
-                        <li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i
-                                        class="icon fa fa-youtube-play"></i></a></li>
-                    </ul>
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
+    {{--<div class="section-area section-social-links wow bounceInRight" data-wow-duration="2s" data-wow-delay="1s">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-xs-12"><span class="social-links__title">Let’s Connect With Us</span>--}}
+                    {{--<ul class="social-links list-unstyled">--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-twitter"></i></a></li>--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-facebook"></i></a></li>--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-google-plus"></i></a></li>--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-instagram"></i></a></li>--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-pinterest-p"></i></a></li>--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-rss"></i></a></li>--}}
+                        {{--<li class="social-links__item"><a class="social-links__link" href="javascript:void(0);"><i--}}
+                                        {{--class="icon fa fa-youtube-play"></i></a></li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+                {{--<!-- end col -->--}}
+            {{--</div>--}}
+            {{--<!-- end row -->--}}
+        {{--</div>--}}
+        {{--<!-- end container -->--}}
+    {{--</div>--}}
     <!-- end section-social-links -->
 
 @endsection

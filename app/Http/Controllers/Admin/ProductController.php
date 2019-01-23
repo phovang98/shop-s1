@@ -39,8 +39,8 @@ class ProductController extends Controller
             'name' => 'required|unique:products|max:191',
             'image' => 'nullable|image|max:2048|mimes:jpeg,png,jpg,gif,svg',
             'video' => 'nullable|max:191',
-            'overview' => 'nullable|max:191',
-            'description' => 'nullable|max:191',
+            'overview' => 'nullable|max:1000',
+            'description' => 'nullable|max:1000',
             'cost' => 'nullable|numeric',
             'price' => 'required|numeric',
             'percent' => 'nullable|numeric',
@@ -118,8 +118,8 @@ class ProductController extends Controller
             'name' => 'required|max:191|unique:products,name,'. $id,
             'image' => 'nullable|image|max:2048|mimes:jpeg,png,jpg,gif,svg',
             'video' => 'nullable|max:191',
-            'overview' => 'nullable|max:191',
-            'description' => 'nullable|max:191',
+            'overview' => 'nullable|max:1000',
+            'description' => 'nullable|max:1000',
             'cost' => 'nullable|numeric',
             'price' => 'required|numeric',
             'percent' => 'nullable|numeric',
@@ -201,7 +201,12 @@ class ProductController extends Controller
                 $gallery->product_id = $id;
 //                $gallery->title = $request->title;
 //                $gallery->alt = $request->alt;
-                $gallery->save();
+                $flag = $gallery->save();
+                if ($flag) {
+                    session()->flash('success', "Thành công!!!");
+                } else {
+                    session()->flash('danger', "Không thành công!!!");
+                }
             }
         }
 

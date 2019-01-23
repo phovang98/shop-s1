@@ -18,16 +18,17 @@ class CreateInvoiceDetailTable extends Migration
             $table->unsignedInteger('product_id');
             $table->integer('quantity');
             $table->integer('unit_price');
+            $table->integer('status')->default(1);
             $table->timestamps();
             $table->primary(['invoice_id', 'product_id']);
 
-            $table->foreign('invoice_id')
-                ->references('id')->on('invoices')
-                ->onDelete('cascade');
-
-            $table->foreign('product_id')
-                ->references('id')->on('products')
-                ->onDelete('cascade');
+//            $table->foreign('invoice_id')
+//                ->references('id')->on('invoices')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('product_id')
+//                ->references('id')->on('products')
+//                ->onDelete('cascade');
         });
     }
 

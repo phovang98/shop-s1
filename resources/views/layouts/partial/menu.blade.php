@@ -115,7 +115,7 @@
                                     <li><a href="404.html">404 page</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ asset('blog') }}">Blog</a>
+                            <li><a href="{{ asset('article') }}">Article</a>
                                 <ul role="menu" class="dropdown-menu">
                                     <li><a href="blog-1.html"> Blog Page</a></li>
                                     <li><a href="blog-2.html"> Post page</a></li>
@@ -123,11 +123,6 @@
                             </li>
                             <li><a href="{{ asset('about') }}"> About Page</a></li>
                             <li><a href="{{ asset('contact') }}">Contact page</a></li>
-                            <li>
-                                <div class="nav-label-wrap"><span class="nav-label nav-label_second">new</span>
-                                </div>
-                                <a href="http://themeforest.net/user/templines/portfolio" target="_blank">BUY
-                                    NOW</a></li>
                         </ul>
                     </div>
                 </div>
