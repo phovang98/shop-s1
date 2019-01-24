@@ -48,3 +48,9 @@ Route::group(['prefix' => 'user'], function (){
     Route::get('/edit/{id}', 'UserController@edit')->name('user.edit');
     Route::post('/edit/{id}', 'UserController@postEdit')->name('user.save-edit');
 });
+
+Route::group(['prefix' => 'invoice'], function (){
+    Route::get('/', 'InvoiceController@index')->name('invoice.list');
+    Route::get('/remove/{invoice_id}/{product_id}', 'InvoiceController@remove')->name('invoice.remove');
+    Route::post('/edit', 'InvoiceController@postEdit')->name('invoice.save-edit');
+});

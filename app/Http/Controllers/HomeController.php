@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Article;
 use App\Model\Product;
 use App\Model\ProductGallery;
 use Illuminate\Http\Request;
@@ -11,7 +12,8 @@ class HomeController extends Controller
 {
     public function index(){
         $products = Product::take(12)->get();
-        return view('client.index',compact('products'));
+        $articles = Article::take(6)->get();
+        return view('client.index',compact('products','articles'));
 
     }
 

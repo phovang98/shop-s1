@@ -73,6 +73,7 @@ class InvoiceController extends Controller
                 $model1->unit_price = $item['price'];
                 $model1->save();
             }
+            Session::forget('cart');
         } else {
             session()->flash('danger', "Không thành công!!!");
         }

@@ -147,7 +147,6 @@
                                     </li>
                             @endforeach
                         </ul>
-                        {{ $products->links() }}
                     </div>
                 </div>
                 <!-- end section-area -->
@@ -461,66 +460,20 @@
                                  data-navigation="true"
                                  data-auto-play="4000"
                                  data-stop-on-hover="true">
-                                <article class="list-posts__article clearfix">
-                                    <div class="img-hover-effect"><img class="img-responsive"
-                                                                       src="{{ asset('client/media/420x250/1.png') }}" height="250"
-                                                                       width="420" alt="Foto"></div>
-                                    <div class="list-posts__info"><i class="icon icon-user"></i><span
-                                                class="list-posts__autor">By <a class="color_primary"
-                                                                                href="javascript:void(0);">MEX</a></span>
-                                        <i class="icon icon-calendar"></i><span class="list-posts__date"> June 20, 2015 </span>
-                                    </div>
-                                    <h2 class="list-posts__title">Praesent auctor justo et pulvinar</h2>
-                                    <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec
-                                        hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem
-                                        felis sollicitudin sed.</p>
-                                    <a class="btn btn-info pull-right" href="javascript:void(0);">READ MORE</a>
-                                </article>
-                                <article class="list-posts__article clearfix">
-                                    <div class="img-hover-effect"><img class="img-responsive"
-                                                                       src="{{ asset('client/media/420x250/2.png') }}" height="250"
-                                                                       width="420" alt="Foto"></div>
-                                    <div class="list-posts__info"><i class="icon icon-user"></i><span
-                                                class="list-posts__autor">By <a class="color_primary"
-                                                                                href="javascript:void(0);">MEX</a></span>
-                                        <i class="icon icon-calendar"></i><span class="list-posts__date">June 20, 2015 </span>
-                                    </div>
-                                    <h2 class="list-posts__title">Nam volutpat ornare enim cras</h2>
-                                    <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec
-                                        hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem
-                                        felis sollicitudin sed.</p>
-                                    <a class="btn btn-info pull-right" href="javascript:void(0);">READ MORE</a>
-                                </article>
-                                <article class="list-posts__article clearfix">
-                                    <div class="img-hover-effect"><img class="img-responsive"
-                                                                       src="{{ asset('client/media/420x250/1.png') }}" height="250"
-                                                                       width="420" alt="Foto"></div>
-                                    <div class="list-posts__info"><i class="icon icon-user"></i><span
-                                                class="list-posts__autor">By <a class="color_primary"
-                                                                                href="javascript:void(0);">MEX</a></span>
-                                        <i class="icon icon-calendar"></i><span class="list-posts__date">June 20, 2015 </span>
-                                    </div>
-                                    <h2 class="list-posts__title">Praesent auctor justo et pulvinar</h2>
-                                    <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec
-                                        hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem
-                                        felis sollicitudin sed.</p>
-                                    <a class="btn btn-info pull-right" href="javascript:void(0);">READ MORE</a>
-                                </article>
-                                <article class="list-posts__article clearfix">
-                                    <div class="img-hover-effect"><img class="img-responsive"
-                                                                       src="{{ asset('client/media/420x250/2.png') }}" height="250"
-                                                                       width="420" alt="Foto"></div>
-                                    <div class="list-posts__info"><i class="icon icon-user"></i><span
-                                                class="list-posts__autor">By <a class="color_primary"
-                                                                                href="javascript:void(0);">MEX</a></span>
-                                        <i class="icon icon-calendar"></i><span class="list-posts__date">June 20, 2015 </span>
-                                    </div>
-                                    <h2 class="list-posts__title">Nam volutpat ornare enim cras</h2>
-                                    <p>Crabitur venenatis lacus nec erat. Sed velit urna sollicitu euismo nec
-                                        hendrerit vel velit. Mauris dolor. Aliquam erat volutpat ipsum In lorem
-                                        felis sollicitudin sed.</p>
-                                    <a class="btn btn-info pull-right" href="javascript:void(0);">READ MORE</a>
-                                </article>
+                                @foreach($articles as $article)
+                                    <article class="list-posts__article clearfix">
+                                        <div class="img-hover-effect">
+                                            <img class="img-responsive" src="{{ asset($article->image) }}" height="250" width="420" alt="Foto">
+                                        </div>
+                                        <div class="list-posts__info"><i class="icon icon-user">
+                                            </i><span class="list-posts__autor">By <a class="color_primary" href="javascript:void(0);">{{ $article->author }}</a></span>
+                                            <i class="icon icon-calendar"></i><span class="list-posts__date"> {{ $article->created_at }} </span>
+                                        </div>
+                                        <h2 class="list-posts__title">{{ $article->title }}</h2>
+                                        <p>{!! $article->overview !!}</p>
+                                        <a class="btn btn-info pull-right" href="{{ route('client.article-detail',$article->id) }}">READ MORE</a>
+                                    </article>
+                                @endforeach
                             </div>
                         </div>
                         <!-- end wrap-slider -->
